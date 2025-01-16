@@ -11,7 +11,7 @@ const Register = () => {
         <h2 className="text-[42px] font-bold">Create an account</h2>
         <form className="flex flex-col gap-3">
           <Input type={"text"} placeholder={"Name"} extraClass={"!w-[670px]"}/>
-          <Input type={"number"} placeholder={"Phone number"} extraClass={"!w-[670px]"}/>
+          <Input type={"tel"} placeholder={"Phone number"} extraClass={"!w-[670px]"}/>
           <Link to={"#"} className="text-[18px] text-[#1DA1F2]">Use email</Link>
           <div className="flex flex-col gap-2">
           <h2 className="text-[18px] font-bold">Date of birth</h2>
