@@ -5,7 +5,7 @@ import Messages from "./Messages"
 import Bookmarks from "./Bookmarks"
 import Lists from "./Lists"
 import Profile from "./Profile"
-// import Messages from "./Messages"
+import More from "./More"
 
 
 
@@ -16,6 +16,7 @@ export {
     Messages,
     Bookmarks,
     Lists,
-    Profile
+    Profile,
+    More
 }
 
