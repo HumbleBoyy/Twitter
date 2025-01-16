@@ -1,6 +1,7 @@
 import React from 'react'
 import {Bookmarks, Explore, Home, Lists, Messages, More, Notifications, Profile} from "../Dashboard/index"
 import { PATH } from '../../hooks/usePath'
+import {Likes, Media, Tweets, TweetsReplies} from "../Dashboard/NestedPages/index"
 const DashboardPagesRoutes = () => {
 
     const dashboardRouteList = [
@@ -44,7 +45,32 @@ const DashboardPagesRoutes = () => {
             id:7,
             path:PATH.profile,
             element:<Profile/>,
-            children:[]
+            children:[
+                {
+                    id:9,
+                    path:PATH.profileTweets,
+                    element:<Tweets/>,
+                    children:[]
+                },
+                {
+                    id:10,
+                    path:PATH.profileTweetsReplies,
+                    element:<TweetsReplies/>,
+                    children:[]
+                },
+                {
+                    id:11,
+                    path:PATH.profileMedia,
+                    element:<Media/>,
+                    children:[]
+                },
+                {
+                    id:12,
+                    path:PATH.profileLikes,
+                    element:<Likes/>,
+                    children:[]
+                }
+            ]
         },
         {
             id:8,
