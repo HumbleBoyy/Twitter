@@ -24,10 +24,6 @@ const Register = () => {
           </div>
           <Button text={"Next"} extraClass={"!w-[670px]"}/>
         </form>
-        <div className="flex justify-between items-center">
-          <Link to={"#"} className="text-[18px] text-[#1DA1F2]">Forgot password?</Link>
-          <Link to={"/register"} className="text-[18px] text-[#1DA1F2]">Sign up to Twitter</Link>
-        </div>
       </div>
     </div>
   )
