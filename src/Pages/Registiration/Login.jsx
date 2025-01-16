@@ -5,9 +5,9 @@ import Input from "../../Components/Input/Input"
 
 const Login = () => {
   return (
-    <div className='flex justify-center items-center h-[500px] mt-2'>
+    <div className='flex justify-center items-center h-[100vh]'>
       <div className="flex flex-col gap-10">
-        <img src={Logo} alt="" width={"50"}/>
+        <img src={Logo} alt="TwitterLogo" width={"50"} height={"50"}/>
         <h2 className="text-[42px] font-bold">Log in to Twitter</h2>
         <form className="flex flex-col gap-5">
           <Input type={"text"} placeholder={"Phone number, email address"}/>
