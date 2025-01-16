@@ -1,4 +1,4 @@
-import {Bookmarks, Explore, Home, Lists, Messages, More, Notifications, Profile} from "../Dashboard/index"
+import {Bookmarks, Explore, Home, Lists, Messages, More, Notifications, Profile} from "../Pages/Dashboard"
 import { PATH } from '../../hooks/usePath'
 import {Likes, Media, Tweets, TweetsReplies} from "../Dashboard/NestedPages/index"
 import { Login, Register } from "../Pages/Registiration"

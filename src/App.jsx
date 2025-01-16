@@ -6,9 +6,9 @@ import RegisterRoutes from "./Pages/Registiration"
 const App = () => {
   const {token} = useContext(Context)
   if(token){
-    <DashboardPagesRoutes/>
+   return <DashboardPagesRoutes/>
   }else{
-    <RegisterRoutes/>
+    return <RegisterRoutes/>
   }
 }
 
