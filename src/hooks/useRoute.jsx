@@ -1,6 +1,6 @@
-import {Bookmarks, Explore, Home, Lists, Messages, More, Notifications, Profile} from "../Pages/Dashboard"
-import { PATH } from '../../hooks/usePath'
-import {Likes, Media, Tweets, TweetsReplies} from "../Dashboard/NestedPages/index"
+import {Bookmarks, Explore, Home, Lists, Messages, More, Notifications, Profile} from "../Pages/Dashboard/pages"
+import { PATH } from '../hooks/usePath.jsx'
+import {Likes, Media, Tweets, TweetsReplies} from "../Pages/Dashboard/NestedPages"
 import { Login, Register } from "../Pages/Registiration"
 export  const dashboardRouteList = [
     {
