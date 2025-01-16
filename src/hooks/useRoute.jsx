@@ -1,6 +1,7 @@
 import {Bookmarks, Explore, Home, Lists, Messages, More, Notifications, Profile} from "../Dashboard/index"
 import { PATH } from '../../hooks/usePath'
 import {Likes, Media, Tweets, TweetsReplies} from "../Dashboard/NestedPages/index"
+import { Login, Register } from "../Pages/Registiration"
 export  const dashboardRouteList = [
     {
         id:1,
@@ -75,4 +76,19 @@ export  const dashboardRouteList = [
         element:<More/>,
         children:[]
     }
+]
+
+export const registirationRoutes = [
+    {
+        id:1,
+        path:PATH.home,
+        element:<Login/>,
+        children:[]
+    },
+    {
+        id:1,
+        path:PATH.register,
+        element:<Register/>,
+        children:[]
+    },
 ]

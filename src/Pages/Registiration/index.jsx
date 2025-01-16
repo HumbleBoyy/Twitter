@@ -1,12 +1,10 @@
-import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import {Login, Register} from './index'
+import { registirationRoutes } from '../../hooks/useRoute'
 
 const RegisterRoutes = () => {
   return (
     <Routes>
-        <Route path={'/'} element={<Login/>}/>
-        <Route path={'/register'} element={<Register/>}/>
+        {registirationRoutes.map(item => <Route key={item.id} path={item.path} element={item.element}/>)}
     </Routes>
   )
 }
