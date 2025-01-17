@@ -6,7 +6,7 @@ import Spinner from "../../assets/Images/spinner.png"
 import { useState } from "react"
 
 const Login = () => {
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
   const handleSubmit = (e) => {
     e.preventDefault()
     setIsLoading(true)
@@ -14,6 +14,9 @@ const Login = () => {
       phoneNumberOrNumber: e.target.email.value,
       password:e.target.password.value
     }
+
+    console.log(data)
+    setTimeout(() => setIsLoading(false), 1000)
   }
   return (
     <div className='flex justify-center items-center h-[100vh]'>
