@@ -10,9 +10,12 @@ const Register = () => {
         <img src={Logo} alt="TwitterLogo" width={"50"} height={"50"} className="block mx-auto"/>
         <h2 className="text-[42px] font-bold">Create an account</h2>
         <form className="flex flex-col gap-3">
-          <Input type={"text"} placeholder={"Name"} extraClass={"!w-[670px]"}/>
-          <Input type={"tel"} placeholder={"Phone number"} extraClass={"!w-[670px]"}/>
+          <Input required type={"text"} placeholder={"Name"} extraClass={"!w-[670px]"}/>
+          <Input required type={"tel"} placeholder={"Phone number"} extraClass={"!w-[670px]"}/>
+          <div className="flex justify-between items-center">
           <Link to={"#"} className="text-[18px] text-[#1DA1F2]">Use email</Link>
+          <Link to={"/"} className="text-[18px] text-[#1DA1F2]">Log In</Link>
+          </div>
           <div className="flex flex-col gap-2">
           <h2 className="text-[18px] font-bold">Date of birth</h2>
           <p className="text-[16px] text-slate-500 w-[670px]">
