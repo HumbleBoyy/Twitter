@@ -5,6 +5,7 @@ import Input from "../../Components/Input/Input"
 import Spinner from "../../assets/Images/spinner.png"
 import { useContext, useState } from "react"
 import { Context } from "../../Context/context"
+import toast, { Toaster } from "react-hot-toast"
 
 const Register = () => {
   const {users, setUsers} = useContext(Context)
@@ -23,16 +24,25 @@ const Register = () => {
 
     console.log(data)
     setUsers([...users, data])
-    
-    e.target.reset()
+
     setTimeout(() => {
+      toast.success("Account Created Successfully")
+    },500)
+
+
+    setTimeout(() => {
+      e.target.reset()
       setIsLoading(false)
       navigate(-1)
-    }, 1000)
-    
+    }, 2000)
   }
+
   return (
     <div className='flex justify-center items-center h-[100vh]'>
+         <Toaster
+          position="top-center"
+          reverseOrder={false}
+        />
       <div className="flex flex-col gap-5">
         <img src={Logo} alt="TwitterLogo" width={"50"} height={"50"} className="block mx-auto"/>
         <h2 className="text-[42px] font-bold">Create an account</h2>
