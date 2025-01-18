@@ -2,6 +2,7 @@ import {Bookmarks, Explore, Home, Lists, Messages, More, Notifications, Profile}
 import { PATH } from '../hooks/usePath.jsx'
 import {Likes, Media, Tweets, TweetsReplies} from "../Pages/Dashboard/NestedPages"
 import { Login, Register } from "../Pages/Registiration"
+import { HomeIcon, ExploreIcon, NotificationIcon, MessagesIcon, BookmarksIcon, ListIcon, ProfileIcon, MoreIcon} from "../assets/Logos/icons.jsx"
 export  const dashboardRouteList = [
     {
         id:1,
@@ -90,5 +91,64 @@ export const registirationRoutes = [
         path:PATH.register,
         element:<Register/>,
         children:[]
+    },
+]
+
+export const navbarList = [
+    {
+        id:1,
+        title:"Home",
+        path:PATH.home,
+        icon:<HomeIcon active={false}/>,
+        activeIcon:<HomeIcon active={true}/>
+    },
+    {
+        id:2,
+        title:"Explore",
+        path:PATH.explore,
+        icon:<ExploreIcon active={false}/>,
+        activeIcon:<ExploreIcon active={true}/>,
+    },
+    {
+        id:3,
+        title:"Notifications",
+        path:PATH.notification,
+        icon:<NotificationIcon active={false}/>,
+        activeIcon:<NotificationIcon active={true}/>,
+    },
+    {
+        id:4,
+        title:"Messages",
+        path:PATH.messages,
+        icon:<MessagesIcon active={false}/>,
+        activeIcon:<MessagesIcon active={true}/>,
+    },
+    {
+        id:5,
+        title:"Bookmarks",
+        path:PATH.bookmarks,
+        icon:<BookmarksIcon active={false}/>,
+        activeIcon:<BookmarksIcon active={true}/>,
+    },
+    {
+        id:6,
+        title:"Lists",
+        path:PATH.lists,
+        icon:<ListIcon active={false}/>,
+        activeIcon:<ListIcon active={true}/>,
+    },
+    {
+        id:7,
+        title:"Profile",
+        path:PATH.profile,
+        icon:<ProfileIcon active={false}/>,
+        activeIcon:<ProfileIcon active={true}/>,
+    },
+    {
+        id:8,
+        title:"More",
+        path:PATH.more,
+        icon:<MoreIcon active={false}/>,
+        activeIcon:<MoreIcon active={true}/>,
     },
 ]
