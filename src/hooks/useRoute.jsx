@@ -6,7 +6,7 @@ import { HomeIcon, ExploreIcon, NotificationIcon, MessagesIcon, BookmarksIcon, L
 import { BsThreeDots } from "react-icons/bs"
 import angela from "../../src/assets/Images/angela.png"
 import johnny from "../../src/assets/Images/johnny.png"
-
+import avatarDefault from "../assets/Images/emptyAvatar.jpg"
 // Dashboard List data collaction
 export  const dashboardRouteList = [
     {
@@ -220,5 +220,11 @@ export const suggestionsList = [
         name:"Johnny",
         userName:"johnny_02",
         avatarImage:johnny
+    },
+    {
+        id:2,
+        name:"Johnny",
+        userName:"johnny_02",
+        avatarImage:avatarDefault
     },
 ]
