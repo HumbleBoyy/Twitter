@@ -179,22 +179,22 @@ export const trendsList = [
     {
         id:4,
         secondaryTitle:"Revolution",
-        mainTitle:"Trending in Turkiye",
+        mainTitle:"Trending in Kazakhstan",
         tweetCount:80.4,
         moreIcon:<BsThreeDots />
     },
     {
         id:5,
         secondaryTitle:"Revolution",
-        mainTitle:"Trending in Turkiye",
-        tweetCount:80.4,
+        mainTitle:"Trending in Middle East",
+        tweetCount:20.4,
         moreIcon:<BsThreeDots />
     },
     {
         id:6,
         secondaryTitle:"Revolution",
-        mainTitle:"Trending in Turkiye",
-        tweetCount:80.4,
+        mainTitle:"Trending in China",
+        tweetCount:810.4,
         moreIcon:<BsThreeDots />
     },
 ]
