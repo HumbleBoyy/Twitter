@@ -1,10 +1,11 @@
 import React from 'react'
+import WarningPage from '../../Components/WarningPage/Warning'
 
 const Messages = () => {
   return (
-    <div>
-      Messages
-    </div>
+    <>
+      <WarningPage/>
+    </>
   )
 }
 

@@ -11,3 +11,27 @@
 .active {
     font-weight: 700;
 }
+
+
+::-webkit-scrollbar {
+	width: 1px;
+    height: 1px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f3f3f3;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #c1c1c1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+.newClass{
+    background-image: url("./assets/Images/search.png");
+    background-position: left;
+    background-repeat: no-repeat;
+}

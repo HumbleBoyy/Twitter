@@ -3,6 +3,7 @@ import { PATH } from '../hooks/usePath.jsx'
 import {Likes, Media, Tweets, TweetsReplies} from "../Pages/Dashboard/NestedPages"
 import { Login, Register } from "../Pages/Registiration"
 import { HomeIcon, ExploreIcon, NotificationIcon, MessagesIcon, BookmarksIcon, ListIcon, ProfileIcon, MoreIcon} from "../assets/Logos/icons.jsx"
+import { BsThreeDots } from "react-icons/bs"
 export  const dashboardRouteList = [
     {
         id:1,
@@ -150,5 +151,50 @@ export const navbarList = [
         path:PATH.more,
         icon:<MoreIcon active={false}/>,
         activeIcon:<MoreIcon active={true}/>,
+    },
+]
+
+export const trendsList = [
+    {
+        id:1,
+        secondaryTitle:"Revolution",
+        mainTitle:"Trending in Uzbekistan",
+        tweetCount:270.4,
+        moreIcon:<BsThreeDots />
+    },
+    {
+        id:2,
+        secondaryTitle:"Revolution",
+        mainTitle:"Trending in USA",
+        tweetCount:150.4,
+        moreIcon:<BsThreeDots />
+    },
+    {
+        id:3,
+        secondaryTitle:"Revolution",
+        mainTitle:"Trending in Turkiye",
+        tweetCount:80.4,
+        moreIcon:<BsThreeDots />
+    },
+    {
+        id:4,
+        secondaryTitle:"Revolution",
+        mainTitle:"Trending in Turkiye",
+        tweetCount:80.4,
+        moreIcon:<BsThreeDots />
+    },
+    {
+        id:5,
+        secondaryTitle:"Revolution",
+        mainTitle:"Trending in Turkiye",
+        tweetCount:80.4,
+        moreIcon:<BsThreeDots />
+    },
+    {
+        id:6,
+        secondaryTitle:"Revolution",
+        mainTitle:"Trending in Turkiye",
+        tweetCount:80.4,
+        moreIcon:<BsThreeDots />
     },
 ]
