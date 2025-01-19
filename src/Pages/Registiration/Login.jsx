@@ -21,6 +21,7 @@ const Login = () => {
 
     if(users.length > 0){
        const findUser = users.some(item =>( item.email === data.phoneNumberOrNumber || item.phone === data.phoneNumberOrNumber) && item.password === data.password)
+       const userData = users.find(item =>( item.email === data.phoneNumberOrNumber || item.phone === data.phoneNumberOrNumber) && item.password === data.password)
        if(findUser){
         setTimeout(()=> {
           toast.success(`Welcome To Your Account`)
@@ -28,6 +29,7 @@ const Login = () => {
         setTimeout(()=> {
           setIsLoading(false)
           setToken(data)
+          localStorage.setItem("user_info", JSON.stringify(userData))
         },1000)
        }
     }else{

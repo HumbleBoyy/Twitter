@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom'
 
 const Trends = () => {
   return (
-    <div className='w-full p-2 mt-10 bg-slate-100'>
+    <div className='w-full p-2 mt-3 bg-slate-100'>
          <h2 className='flex items-center font-bold justify-between mb-2 text-[24px]'>Trends for you <IoSettingsOutline className='cursor-pointer'/>   </h2> 
-         <ul className='w-full h-[50vh] overflow-y-auto flex flex-col gap-1'>
+         <ul className='w-full h-[40vh] overflow-y-auto flex flex-col gap-1'>
               {trendsList.map(item => (
                 <li className='flex flex-col h-auto p-2 bg-slate-200' key={item.id}>
                   <div className='flex justify-between items-center'>
