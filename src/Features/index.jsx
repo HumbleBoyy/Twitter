@@ -7,11 +7,10 @@ const DashboardLayout = ({children}) => {
   return (
     <div className='px-10 flex'>
       <Navbar/>
-          <div className='w-[60%] h-[100vh] overflow-y-auto border-r-2 border-slate-400'>
+          <div className='w-[56%] h-[100vh] overflow-y-auto border-r-2 border-slate-400'>
            <Header/>
            {children}
           </div>
-          
             <Sidebar/>
           
     </div>

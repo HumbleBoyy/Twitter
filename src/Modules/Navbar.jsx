@@ -9,7 +9,7 @@ const Navbar = () => {
 
 
   return (
-    <div className='w-[20%] h-[100vh] border-r-2 border-slate-400 overflow-y-auto pt-[35px]'>
+    <div className='w-[22%] h-[100vh] border-r-2 border-slate-400 overflow-y-auto pt-[35px]'>
       <img src={Logo} alt="Logo"  width={40} height={40}/>
       <nav className="mt-10">
         {navbarList.map(item => (

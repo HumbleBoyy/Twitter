@@ -4,6 +4,10 @@ import {Likes, Media, Tweets, TweetsReplies} from "../Pages/Dashboard/NestedPage
 import { Login, Register } from "../Pages/Registiration"
 import { HomeIcon, ExploreIcon, NotificationIcon, MessagesIcon, BookmarksIcon, ListIcon, ProfileIcon, MoreIcon} from "../assets/Logos/icons.jsx"
 import { BsThreeDots } from "react-icons/bs"
+import angela from "../../src/assets/Images/angela.png"
+import johnny from "../../src/assets/Images/johnny.png"
+
+// Dashboard List data collaction
 export  const dashboardRouteList = [
     {
         id:1,
@@ -80,6 +84,7 @@ export  const dashboardRouteList = [
     }
 ]
 
+// Register List data collaction
 export const registirationRoutes = [
     {
         id:1,
@@ -95,6 +100,7 @@ export const registirationRoutes = [
     },
 ]
 
+// Navbar List data collaction
 export const navbarList = [
     {
         id:1,
@@ -154,6 +160,8 @@ export const navbarList = [
     },
 ]
 
+
+// Trends List data collaction
 export const trendsList = [
     {
         id:1,
@@ -196,5 +204,21 @@ export const trendsList = [
         mainTitle:"Trending in China",
         tweetCount:810.4,
         moreIcon:<BsThreeDots />
+    },
+]
+
+// Suggestions List data collaction
+export const suggestionsList = [
+    {
+        id:1,
+        name:"Angela",
+        userName:"angela_06",
+        avatarImage:angela
+    },
+    {
+        id:2,
+        name:"Johnny",
+        userName:"johnny_02",
+        avatarImage:johnny
     },
 ]
