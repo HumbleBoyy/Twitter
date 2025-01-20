@@ -11,9 +11,10 @@ import PostItem from "../../Components/PostItem/PostItem"
 
 const Home = () => {
    const [isLoading, setIsLoading] = useState(false)
-  const [postImage, setPostImage] = useState(null)
-  const userInfo = JSON.parse(localStorage.getItem("user_info"))
-  const [postList, setPostList] = useState([
+   const [postImage, setPostImage] = useState(null)
+   const userInfo = JSON.parse(localStorage.getItem("user_info"))
+   console.log(postImage)
+   const [postList, setPostList] = useState([
           {
             id:1,
             avatarImage:defaultAvatar,
