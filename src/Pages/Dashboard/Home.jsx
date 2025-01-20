@@ -41,13 +41,15 @@ const Home = () => {
       setPostList([...postList, data])
      },1000)
   }
+
+  localStorage.setItem("post_list", JSON.stringify(postList))
   return (
     <>
      <div className="w-full border-b-2 h-[150px] border-slate-400 p-5">
-       <form onSubmit={handlePostSubmit}>
+       <form autoComplete="off" onSubmit={handlePostSubmit}>
          <div className="flex  items-center gap-2">
          <img src={defaultAvatar} alt="userImage" width={50} height={50} />
-         <Input name={"postContent"} required  placeholder={"Type Something to post"} extraClass={"!border-transparent !w-[80%]"}/>
+         <Input name={"postContent"} type={"text"} required  placeholder={"Type Something to post"} extraClass={"!border-transparent !w-[80%]"}/>
          </div>
          <div className="flex items-center gap-5 m-5 relative">
           <label>

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Reaction = ({icon, count,extraClass}) => {
+const Reaction = ({icon, count, extraClass, onClick}) => {
   return (
-    <div className={`flex items-center gap-2 text-[17px] ${extraClass}`}>
-      {icon}
+    <div className={`flex items-center gap-1 ${extraClass}`}>
+      <button onClick={onClick}>{icon}</button>
       <span>{count !== 0 ? count : ""}</span>
     </div>
   )
