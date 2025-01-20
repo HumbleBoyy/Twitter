@@ -223,8 +223,8 @@ export const suggestionsList = [
     },
     {
         id:2,
-        name:"Johnny",
-        userName:"johnny_02",
+        name:"Jerry",
+        userName:"jerry_01",
         avatarImage:avatarDefault
     },
 ]
