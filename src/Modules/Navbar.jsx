@@ -39,7 +39,7 @@ const Navbar = () => {
           <img src={defaultAvatar} alt="userImage" width={50} height={50} />
           <div className="flex flex-col w-full">
               <h2 className="text-[20px] font-semibold">{userInfo.username}</h2>
-              <p className="text-[15px] text-slate-500">{userInfo.useremail ? `@${userInfo}` : ""}</p>
+              <p className="text-[15px] text-slate-500">{userInfo.email ? `@${userInfo.email}` : ""}</p>
           </div>
           <BsThreeDots size={"35px"}/>
       </div>
