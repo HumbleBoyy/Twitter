@@ -19,7 +19,7 @@ const PostItem = ({item}) => {
                     <p className='text-[16px]'>{item.postContent}</p>
                  </div>
               </div>
-              {item.postPicture && <img src={item.postPicture} alt="Post image" width={400} height={400} />}
+              {item.postPicture && <img src={item.postPicture} alt="Post image" width={"full"} className='rounded-[30px] mb-5' height={400} />}
               
               <div className='flex px-3 gap-10'>
                 <Reaction icon={<LuMessageSquare />} count={item.commentCount}/>

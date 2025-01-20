@@ -13,27 +13,11 @@ const Home = () => {
    const [isLoading, setIsLoading] = useState(false)
    const [postImage, setPostImage] = useState(null)
    const userInfo = JSON.parse(localStorage.getItem("user_info"))
-   console.log(postImage)
-   const [postList, setPostList] = useState([
-          {
-            id:1,
-            avatarImage:defaultAvatar,
-            name:"Jerry",
-            userName:"@jerry_02",
-            postContent:"Hello guys, What is up?",
-            commentCount:10,
-            rePost:0,
-            isLiked:false,
-            likeCount:0,
-            forwardCount:0,
-            stats:0,
-            postPicture:postImage
-          }
-  ])
-  console.log(postList)
-  const handlePostSubmit = (e) => {
-     e.preventDefault()
 
+   const [postList, setPostList] = useState([])
+  
+   const handlePostSubmit = (e) => {
+     e.preventDefault()
      const data = {
           id:postList.length ? postList[postList.length - 1].id + 1 : 1,
           avatarImage:defaultAvatar,
