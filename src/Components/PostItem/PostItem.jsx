@@ -9,15 +9,15 @@ const PostItem = ({item}) => {
     const [isLiked, setIsLiked] = useState(false)
   return (
     <>
-       <li className="border-b-2 border-slate-400 h-auto p-5">
+       <li className="border-b-2 w-full border-slate-400 h-auto p-5">
                <div className="flex items-start gap-2 mb-5">
                 <img src={item.avatarImage} alt="userImage" width={50} height={50}/>
-                 <div className="flex flex-col gap-1 w-[500px]">
+                 <div className="flex flex-col  gap-1">
                    <div className='flex items-center gap-2'>
                       <h2 className="text-[20px] font-bold">{item.name}</h2>
                       <p className="text-[15px] text-slate-500">{item.userName}</p> 
                    </div>
-                    <p className='text-[16px]'>{item.postContent}</p>
+                     <p className='text-[16px] w-[50%] overflow-hidden h-auto'>{item.postContent}</p>
                  </div>
               </div>
               {item.postPicture && <img src={item.postPicture} alt="Post image" width={"full"} className='rounded-[30px] mb-8' height={400} />}

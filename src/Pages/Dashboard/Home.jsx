@@ -14,7 +14,7 @@ const Home = () => {
    const [postImage, setPostImage] = useState(null)
    const userInfo = JSON.parse(localStorage.getItem("user_info"))
 
-   const [postList, setPostList] = useState([])
+   const [postList, setPostList] = useState(JSON.parse(localStorage.getItem("post_list")) || [])
   
    const handlePostSubmit = (e) => {
      e.preventDefault()
@@ -38,18 +38,18 @@ const Home = () => {
      setTimeout(()=> {
       setIsLoading(false)
       e.target.reset()
-      setPostList([...postList, data])
+      setPostList([data, ...postList])
      },1000)
   }
 
   localStorage.setItem("post_list", JSON.stringify(postList))
   return (
     <>
-     <div className="w-full border-b-2 h-[150px] border-slate-400 p-5">
-       <form autoComplete="off" onSubmit={handlePostSubmit}>
+     <div className="w-full border-b-2 border-slate-400 p-2">
+       <form autoComplete="off"  onSubmit={handlePostSubmit}>
          <div className="flex  items-center gap-2">
          <img src={defaultAvatar} alt="userImage" width={50} height={50} />
-         <Input name={"postContent"} type={"text"} required  placeholder={"Type Something to post"} extraClass={"!border-transparent !w-[80%]"}/>
+         <textarea rows={3} name={"postContent"} required className="outline-none border-2 border-transparent focus:border-2 focus:border-blue-600 rounded-md w-full resize-none p-2"  placeholder={"Type Something to post"}/>
          </div>
          <div className="flex items-center gap-5 m-5 relative">
           <label>
@@ -62,8 +62,6 @@ const Home = () => {
           <Button isLoading={isLoading} loadingImage={Spinner} type={"submit"} text={"Tweet"} extraClass={"!w-[150px] h-[45px] !absolute !right-0"}/>
        </div>
        </form>
-      
-    
      </div>
      <ul>
         {postList.map(item => <PostItem key={item.id} item={item}/>)}
