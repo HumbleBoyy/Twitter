@@ -11,5 +11,6 @@ export const PATH = {
     profileMedia:"/profile/media",
     profileLikes:"/profile/likes",
     more:"/more",
-    register:"/register"
+    register:"/register",
+    notFound:"*"
 }

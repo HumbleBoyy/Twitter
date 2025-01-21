@@ -6,7 +6,7 @@ import Bookmarks from "./Bookmarks"
 import Lists from "./Lists"
 import Profile from "./Profile"
 import More from "./More"
-
+import NotFound from "./NotFound"
 
 
 export {
@@ -17,6 +17,7 @@ export {
     Bookmarks,
     Lists,
     Profile,
-    More
+    More,
+    NotFound
 }
 

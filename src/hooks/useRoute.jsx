@@ -1,4 +1,4 @@
-import {Bookmarks, Explore, Home, Lists, Messages, More, Notifications, Profile} from "../Pages/Dashboard/pages"
+import {Bookmarks, Explore, Home, Lists, Messages, More, NotFound, Notifications, Profile} from "../Pages/Dashboard/pages"
 import { PATH } from '../hooks/usePath.jsx'
 import {Likes, Media, Tweets, TweetsReplies} from "../Pages/Dashboard/NestedPages"
 import { Login, Register } from "../Pages/Registiration"
@@ -80,6 +80,12 @@ export  const dashboardRouteList = [
         id:8,
         path:PATH.more,
         element:<More/>,
+        children:[]
+    },
+    {
+        id:9,
+        path:PATH.notFound,
+        element:<NotFound/>,
         children:[]
     }
 ]
