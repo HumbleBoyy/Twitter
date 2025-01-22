@@ -8,6 +8,7 @@ import Button from "../../Components/Button/Button"
 import Spinner from "../../assets/Images/spinner.png"
 import { useState } from "react"
 import PostItem from "../../Components/PostItem/PostItem"
+import toast, { Toaster } from "react-hot-toast"
 
 const Home = () => {
    const [isLoading, setIsLoading] = useState(false)
@@ -18,6 +19,10 @@ const Home = () => {
   
    const handlePostSubmit = (e) => {
      e.preventDefault()
+     if (!e.target.postContent.value.trim() && !postImage) {
+      toast.error("Please provide text or an image to post.");
+      return;
+    }
      const data = {
           id:postList.length ? postList[postList.length - 1].id + 1 : 1,
           avatarImage:defaultAvatar,
@@ -37,6 +42,7 @@ const Home = () => {
 
      setTimeout(()=> {
       setIsLoading(false)
+      setPostImage(null)
       e.target.reset()
       setPostList([data, ...postList])
      },1000)
@@ -45,11 +51,15 @@ const Home = () => {
   localStorage.setItem("post_list", JSON.stringify(postList))
   return (
     <>
+     <Toaster
+          position="top-center"
+          reverseOrder={false}
+        />
      <div className="w-full border-b-2 border-slate-400 p-2">
        <form autoComplete="off"  onSubmit={handlePostSubmit}>
          <div className="flex  items-center gap-2">
          <img src={defaultAvatar} alt="userImage" width={50} height={50} />
-         <textarea rows={3} name={"postContent"} required className="outline-none border-2 border-transparent focus:border-2 focus:border-blue-600 rounded-md w-full resize-none p-2"  placeholder={"Type Something to post"}/>
+         <textarea rows={3} name={"postContent"}  className="outline-none  border-2 border-transparent focus:border-2 focus:border-blue-600 rounded-md w-full resize-none p-2"  placeholder={"Type Something to post"}/>
          </div>
          <div className="flex items-center gap-5 m-5 relative">
           <label>

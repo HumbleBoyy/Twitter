@@ -17,7 +17,7 @@ const PostItem = ({item}) => {
                       <h2 className="text-[20px] font-bold">{item.name}</h2>
                       <p className="text-[15px] text-slate-500">{item.userName}</p> 
                    </div>
-                     <p className='text-[16px] w-[50%] overflow-hidden h-auto'>{item.postContent}</p>
+                     <p className='text-[16px] w-[700px] overflow-wrap  break-words h-auto'>{item.postContent}</p>
                  </div>
               </div>
               {item.postPicture && <img src={item.postPicture} alt="Post image" width={"full"} className='rounded-[30px] mb-8' height={400} />}
