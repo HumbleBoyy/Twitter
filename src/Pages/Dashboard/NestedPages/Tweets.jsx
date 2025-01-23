@@ -1,10 +1,16 @@
-import React from 'react'
+import PostItem from '../../../Components/PostItem/PostItem'
+import getUserInfo from '../../../hooks/getUserInfo'
 
 const Tweets = () => {
+  const {postList} = getUserInfo()
   return (
-    <div>
-      Tweets
-    </div>
+    <>
+      <ul>
+        {postList.map(item => (
+          <PostItem item={item} key={item.id}/>
+        ))}
+      </ul>
+    </>
   )
 }
 

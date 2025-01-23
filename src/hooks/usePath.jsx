@@ -6,6 +6,7 @@ export const PATH = {
     bookmarks:"/bookmarks",
     lists:"/lists",
     profile:"/profile",
+    profileTweets:"/profile",
     profileTweetsReplies:"/profile/tweetsandreplies",
     profileMedia:"/profile/media",
     profileLikes:"/profile/likes",

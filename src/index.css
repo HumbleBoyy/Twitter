@@ -31,7 +31,7 @@
     }
 }
 
-.nested_link_wrapper > .active::before{
+.nested_link_wrapper > .nested_active::before{
     content: "";
     width: 100%;
     height: 5px;

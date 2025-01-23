@@ -3,19 +3,19 @@ import imageD from "../../assets/Images/bg.jpg"
 import avatarI from "../../assets/Images/emptyAvatar.jpg"
 import Button from "../../Components/Button/Button"
 import Modal from "../../Components/Modal/Modal"
-import getUserInfo from "../../hooks/getUserInfo"
 import UserBio from "../../Modules/UserBio"
 import { PATH } from "../../hooks/usePath"
 import { NavLink, Outlet } from "react-router-dom"
 
 const Profile = () => {
   const [openModal, setOpenModal] = useState(false)
-  const {username,email, postList} = getUserInfo()
+
+ const [active, setActive] = useState("/profile")
  
   const nestedList = [
     {
       id:1,
-      path:PATH.profile,
+      path:PATH.profileTweets,
       title:"Tweets"
     },
     {
@@ -47,7 +47,7 @@ const Profile = () => {
       <UserBio/>
       
       <div className="px-[25px] mt-[40px] border-b-2 border-slate-400 flex justify-between items-center nested_link_wrapper">
-        {nestedList.map(item => <NavLink key={item.id} to={item.path} className={"text-[18px] pb-[19px] relative"}>{item.title}</NavLink>)}
+        {nestedList.map(item => <NavLink onClick={()=> setActive(item.path)} key={item.id} to={item.path} className={`text-[18px] ${item.path === active && "nested_active"} pb-[19px] relative`}>{item.title}</NavLink>)}
       </div>
       <Outlet/>
       <Modal openModal={openModal} setOpenModal={setOpenModal}>

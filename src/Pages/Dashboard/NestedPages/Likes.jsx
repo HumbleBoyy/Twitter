@@ -1,10 +1,11 @@
 import React from 'react'
+import WarningPage from '../../../Components/WarningPage/Warning'
 
 const Likes = () => {
   return (
-    <div>
-      Likes
-    </div>
+    <>
+    <WarningPage/>
+    </>
   )
 }
 

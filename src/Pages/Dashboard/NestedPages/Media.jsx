@@ -1,10 +1,12 @@
 import React from 'react'
+import WarningPage from '../../../Components/WarningPage/Warning'
 
 const Media = () => {
   return (
-    <div>
-      Media
-    </div>
+    <>
+    <WarningPage/>
+    </>
+    
   )
 }
 
