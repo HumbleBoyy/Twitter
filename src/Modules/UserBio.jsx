@@ -34,14 +34,14 @@ const UserBio = () => {
     <h2 className="text-[18px]">Frontend developer at <Link to={"#"} className="text-blue-500">@Asadullohs</Link></h2>
     <div className="flex gap-10 items-center mt-5">
       {userBio.map(item => (
-        <>
+        <div key={item.id}>
           {item.isLink ? 
            <Link to={`http://${item.title}`} target="_blank" className="flex items-center gap-1 text-[18px] text-blue-500">{item.icon} {item.title}</Link>
            : 
            <p className="flex items-center gap-1 text-[18px] text-slate-500">{item.icon} {item.title}</p>
           }
           
-        </>
+        </div>
       ))}
     </div>
     <div className="flex items-center gap-2 mt-3">
