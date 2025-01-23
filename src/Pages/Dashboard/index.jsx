@@ -7,7 +7,14 @@ const DashboardPagesRoutes = () => {
   return (
     <DashboardLayout>
       <Routes>
-        {dashboardRouteList.map(item =><Route key={item.id} path={item.path} element={item.element} />)}
+        {dashboardRouteList.map(item =>
+          item.children.length > 0 ?
+          <Route key={item.id} path={item.path} element={item.element}>
+            {item.children.map(item2 => <Route key={item2.id} path={item2.path} element={item2.element} />)}
+          </Route>
+          :
+          <Route key={item.id} path={item.path} element={item.element} />
+        )}
       </Routes>
    </DashboardLayout>
   )
