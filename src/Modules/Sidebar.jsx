@@ -19,10 +19,10 @@ const Sidebar = () => {
       </>
       :
         <>
-        <div className='flex flex-wrap  w-full gap-[1px] h-auto mt-2  rounded-[20px]'>
+        <div className='flex flex-wrap  w-full gap-[1px] h-auto mt-2  rounded-[50px]'>
           {postList.map(item => (
             <>
-               {item.postPicture !== null ? <img src={item.postPicture} className='object-cover hover:scale-50 cursor-pointer duration-500 w-[100px]' key={item.id} width={123} height={88}/> :""}
+               {item.postPicture !== null ? <img src={item.postPicture} alt='PostImage' className='object-cover hover:scale-50 cursor-pointer duration-500 w-[100px]' key={item.id} width={123} height={88}/> :""}
             </>
           ))}
         </div>

@@ -99,7 +99,7 @@ export const registirationRoutes = [
         children:[]
     },
     {
-        id:1,
+        id:2,
         path:PATH.register,
         element:<Register/>,
         children:[]
