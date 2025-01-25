@@ -11,7 +11,7 @@ const DashboardLayout = ({children}) => {
            <Header/>
            {children}
           </div>
-            <Sidebar/>
+          <Sidebar/>
           
     </div>
   )

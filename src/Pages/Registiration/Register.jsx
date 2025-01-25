@@ -12,6 +12,7 @@ const Register = () => {
   const navigate = useNavigate()
   const [openEmail, setOpenEmail] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  
   const handleRegisterSubmit = (e) => {
     e.preventDefault()
     setIsLoading(true)
