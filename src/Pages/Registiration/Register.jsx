@@ -23,7 +23,6 @@ const Register = () => {
       email: openEmail ? e.target.email.value : null
     }
 
-    console.log(data)
     setUsers([...users, data])
 
     setTimeout(() => {
