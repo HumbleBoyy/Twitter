@@ -69,4 +69,11 @@
     .app_wrapper{
         display: none;
     }
+    .message_wrapper{
+        height: 100vh;
+        width: 100%;
+        background: #000;
+        display: flex; justify-content: center;
+        align-items: center;
+    }
 }
