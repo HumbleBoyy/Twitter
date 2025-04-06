@@ -14,7 +14,7 @@ createRoot(document.getElementById('root')).render(
             <div className='fixed inset-0   justify-center top-56 items-center w-full z-0'>
                  <img className="logo_animated mx-auto" src={Logo} alt="Logo" width={300} height={300}/>
               </div>
-           <h1 className='text-[20px] font-bold text-white text-center z-50'>Ekraningiz sigimi 1110px-dan kichik!</h1>
+           <h1 className='text-[20px] font-bold text-white text-center z-50'><span className='text-red-600'>!</span>Ekraningiz sigimi <span className='text-red-600'>1110px-dan</span> kichik</h1>
         </div>
     </TokenContext>
   </BrowserRouter>
